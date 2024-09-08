@@ -82,21 +82,24 @@
             <tr>
                 <td>
                     <%--OnRowDataBound="GvGetFees_DataBound" font-size="10px"--%>
-                    <asp:GridView class="pos_12" ForeColor="black" Font-Names="Tahoma"  ID="GvGetFees" runat="server"  
-                        AutoGenerateColumns="false" CellPadding="8" HeaderStyle-Font-Size="14px" HeaderStyle-BackColor="#2E3C59" HeaderStyle-ForeColor="White">
+                    <asp:GridView class="pos_12" ForeColor="black" Font-Names="Tahoma"  
+                        ID="GvGetFees" runat="server"  AutoGenerateColumns="false" CellPadding="8" 
+                        HeaderStyle-Font-Size="14px" HeaderStyle-BackColor="LightGray" 
+                        HeaderStyle-ForeColor="Black" AllowPaging="true" ShowFooter="true">
+
                     <columns>
 <%--                    <asp:BoundField DataField="S_CODE" headertext="St. ID" ItemStyle-Width="0" />
                         <asp:BoundField DataField="FULLNAME" headertext="Student Name" ItemStyle-Width="0"/>
                         <asp:BoundField DataField="STAGENAME" headertext="Year Group" ItemStyle-Width="0"/>--%>
-                        <asp:BoundField DataField="TERMNAME" headertext="Installment" ItemStyle-Width="90"/>
-                        <asp:BoundField DataField="stdate" headertext="Due Date" ItemStyle-Width="90"/>
-                        <asp:BoundField DataField="enddate" headertext="Deadline Date" ItemStyle-Width="90"/>
-<%--                    <asp:BoundField DataField="SUBJECTNAME" headertext="Item Name" ItemStyle-Width="250"/>--%>
-                        <asp:BoundField DataField="FEES" headertext="Total Fees" ItemStyle-Width="100"/>
-                        <asp:BoundField DataField="TOTDISC" headertext="Total Disc." ItemStyle-Width="100"/>
-                        <asp:BoundField DataField="TOTDUE" headertext="Total Due" ItemStyle-Width="100"/>
-                        <asp:BoundField DataField="TOTPAID" headertext="Total Paid" ItemStyle-Width="100"/>
-                        <asp:BoundField DataField="REM" headertext="Remaining" ItemStyle-Width="100"/>
+                        <asp:BoundField DataField="TERMNAME" headertext="Installment" ItemStyle-Width="90" ItemStyle-HorizontalAlign="Left"/>
+                        <asp:BoundField DataField="enddate" headertext="Due Date" ItemStyle-Width="90" ItemStyle-HorizontalAlign="Left"/>
+                        <asp:BoundField DataField="stdate" headertext="Deadline Date" ItemStyle-Width="90" ItemStyle-HorizontalAlign="Left"/>
+<%--                    <asp:BoundField DataField="SUBJECTNAME" headertext="Item Name" ItemStyle-Width="250" ItemStyle-HorizontalAlign="Left"/>--%>
+                        <asp:BoundField DataField="FEES" headertext="Total Fees" ItemStyle-Width="100" ItemStyle-HorizontalAlign="Right" DataFormatString="{0:N2}"/>
+                        <asp:BoundField DataField="TOTDISC" headertext="Total Disc." ItemStyle-Width="100" ItemStyle-HorizontalAlign="Right" DataFormatString="{0:N2}"/>
+                        <asp:BoundField DataField="TOTDUE" headertext="Total Due" ItemStyle-Width="100" ItemStyle-HorizontalAlign="Right" DataFormatString="{0:N2}"/>
+                        <asp:BoundField DataField="TOTPAID" headertext="Total Paid" ItemStyle-Width="100" ItemStyle-HorizontalAlign="Right" DataFormatString="{0:N2}"/>
+                        <asp:BoundField DataField="REM" headertext="Remaining" ItemStyle-Width="100" ItemStyle-HorizontalAlign="Right" DataFormatString="{0:N2}"/>
                     </columns>
                     </asp:GridView>
                 </td>
@@ -105,7 +108,8 @@
         </div>
         <%--                    <asp:BoundField DataField="S_CODE" headertext="St. ID" ItemStyle-Width="0" />
                         <asp:BoundField DataField="FULLNAME" headertext="Student Name" ItemStyle-Width="0"/>
-                        <asp:BoundField DataField="STAGENAME" headertext="Year Group" ItemStyle-Width="0"/>--%><%--                    <asp:BoundField DataField="SUBJECTNAME" headertext="Item Name" ItemStyle-Width="250"/>--%>
+                        <asp:BoundField DataField="STAGENAME" headertext="Year Group" ItemStyle-Width="0"/>--%><%--                    
+                        <asp:BoundField DataField="SUBJECTNAME" headertext="Item Name" ItemStyle-Width="250"/>--%>
 <script>
     function isNumber(evt) 
     {
